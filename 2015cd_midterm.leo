@@ -34,23 +34,23 @@
 <v t="2014fall.20141212095015.1777" a="E"><vh>class Midterm</vh>
 <v t="amd.20150503182609.1"><vh>__init__</vh></v>
 <v t="amd.20150503173602.1"><vh>index</vh></v>
+<v t="2015.20150519112200.1" a="E"><vh>W11</vh>
 <v t="amd.20150503183542.1"><vh>spur</vh></v>
 <v t="amd.20150503183546.1"><vh>spuraction</vh></v>
 <v t="amd.20150503185058.1"><vh>drawspur</vh></v>
 <v t="amd.20150503185210.1"><vh>drawspuraction</vh></v>
+</v>
 <v t="office.20150504093049.1"><vh>cube</vh></v>
 <v t="office.20150504093053.1"><vh>cubeaction</vh></v>
 <v t="office.20150504183254.1"><vh>fileuploadform</vh></v>
 <v t="office.20150504183312.1"><vh>fileaxupload</vh></v>
 <v t="office.20150504185417.1"><vh>download_list</vh></v>
 </v>
-<v t="office.20150504190303.1"><vh>class Download</vh>
+<v t="office.20150504190303.1" a="E"><vh>class Download</vh>
 <v t="office.20150504190303.2"><vh>index</vh></v>
 </v>
-<v t="2015.20150519102720.1"><vh>@edit man.py</vh></v>
-<v t="2015.20150519102832.1"><vh>@edit man2.py</vh></v>
 </v>
-<v t="office.20150504100507.1"><vh>@path static</vh>
+<v t="office.20150504100507.1" a="E"><vh>@path static</vh>
 <v t="office.20150504184156.1"><vh>@edit axuploader.js</vh></v>
 <v t="office.20150504100857.1" a="E"><vh>@path weblink</vh>
 <v t="office.20150504100907.1"><vh>@edit pfcUtils.js</vh></v>
@@ -65,6 +65,8 @@
 </v>
 <v t="2014fall.20141212095015.1780"><vh>@edit setup.py</vh></v>
 </v>
+<v t="2015.20150519102720.1"><vh>@edit man.py</vh></v>
+<v t="2015.20150519102832.1"><vh>@edit man2.py</vh></v>
 <v t="amd.20150503172957.1" a="E"><vh>以下為參考檔案</vh>
 <v t="amd.20150503173029.1" a="E"><vh>@path ref</vh>
 <v t="amd.20150503173008.1" a="E"><vh>@clean wsgi.py</vh>
@@ -102,7 +104,7 @@
 <v t="amd.20150503173937.1"><vh>@edit pybean.py</vh></v>
 </v>
 </v>
-<v t="amd.20150508154247.1"><vh>5個題目</vh>
+<v t="amd.20150508154247.1" a="E"><vh>5個題目</vh>
 <v t="amd.20150508154531.1" a="E"><vh>@path five_problems</vh>
 <v t="amd.20150508154258.1"><vh>problem1</vh>
 <v t="amd.20150508154320.1"><vh>@clean for_sum.py</vh></v>
@@ -298,6 +300,34 @@ QLineEdit#editorLabel {
 <t tx="2014fall.20141212095015.1786">horizontal: body pane to the left
 vertical: body pane on the botton</t>
 <t tx="2015.20150330144929.1714"></t>
+<t tx="2015.20150519112200.1">@cherrypy.expose
+def index(self, N=20 ,N1=20 , M=4, P=20,midx=400):
+    outstring = '''
+&lt;!DOCTYPE html&gt; 
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
+&lt;!-- 載入 brython.js --&gt;
+&lt;script type="text/javascript" src="/static/Brython3.1.1-20150328-091302/brython.js"&gt;&lt;/script&gt;
+&lt;script src="/static/Cango2D.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="/static/gearUtils-04.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;!-- 啟動 brython() --&gt;
+&lt;body onload="brython()"&gt;
+    
+&lt;h1&gt;2015cda_g2 40223102課程練習&lt;/h1&gt;
+
+
+&lt;h1&gt;cda_g2_w11 練習&lt;/h1&gt;
+&lt;form method=POST action=index&gt;
+&lt;a href="spur"&gt;spur&lt;/a&gt;&lt;br /&gt;
+&lt;a href="drawspur"&gt;drawspur&lt;/a&gt;&lt;br /&gt;
+&lt;a href="fileuploadform"&gt;上傳檔案&lt;/a&gt;&lt;br /&gt;
+&lt;a href="download_list"&gt;列出上傳檔案&lt;/a&gt;&lt;br /&gt;
+
+'''
+    return outstring
+</t>
 <t tx="amd.20150503172957.1"></t>
 <t tx="amd.20150503173008.1"># coding=utf-8
 # 上面的程式內容編碼必須在程式的第一或者第二行才會有作用
@@ -1781,37 +1811,16 @@ def index(self, N=20 ,N1=20 , M=4, P=20,midx=400):
 &lt;!-- 啟動 brython() --&gt;
 &lt;body onload="brython()"&gt;
     
-&lt;h1&gt;cda_g2 40223106課程練習&lt;/h1&gt;
-&lt;h2&gt;第二組-組員名單&lt;/h2&gt;
-
-&lt;table style="border:7px #008F00 double;" rules="all" cellpadding='7';&gt;
-&lt;!-- "border:7px" 表示表格邊框粗細 --&gt;
-&lt;!-- "#008F00"  表示表格邊框顏色  --&gt;
-&lt;!--  色碼表 http://www.wibibi.com/info.php?tid=372 --&gt;
-
-&lt;tr&gt;
-&lt;td style='' align='center' valign="middle"&gt;組長&lt;/td&gt;
-&lt;td style='' align='center' valign="middle"&gt;學號&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;陳柏安&lt;/td&gt;&lt;td&gt;40223131&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='' align='center' valign="middle"&gt;組員&lt;/td&gt;
-&lt;td style='' align='center' valign="middle"&gt;學號&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;吳佳容&lt;/td&gt;&lt;td&gt;40223102&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;林瑩禎&lt;/td&gt;&lt;td&gt;40223104&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;侯云婷&lt;/td&gt;&lt;td&gt;40223105&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;許芸瑄&lt;/td&gt;&lt;td&gt;40223106&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;黃雯琦&lt;/td&gt;&lt;td&gt;40223107&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;陳儀芳&lt;/td&gt;&lt;td&gt;40023107&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;!--  align='center' 為水平置中 ，valign="middle" 為垂直置中 --&gt;
+&lt;h1&gt;2015cda_g2 40223102課程練習&lt;/h1&gt;
 
 
-&lt;h1&gt;cda_g2_w11 練習&lt;/h1&gt;
+&lt;h2&gt;cda_g2_w11 練習&lt;/h2&gt;
 &lt;form method=POST action=index&gt;
-&lt;a href="spur"&gt;spur&lt;/a&gt;&lt;br /&gt;
-&lt;a href="drawspur"&gt;drawspur&lt;/a&gt;&lt;br /&gt;
+&lt;a href="spur"&gt;W11_gear7&lt;/a&gt;&lt;br /&gt;(回傳齒數、模數、壓力角值)
+&lt;a href="drawspur"&gt;W11_gear7&lt;/a&gt;&lt;br /&gt;(七顆齒輪囓合)
+
+&lt;p&gt;cda_g2_w12 練習&lt;/p&gt;
+
 &lt;a href="fileuploadform"&gt;上傳檔案&lt;/a&gt;&lt;br /&gt;
 &lt;a href="download_list"&gt;列出上傳檔案&lt;/a&gt;&lt;br /&gt;
 
@@ -1874,24 +1883,24 @@ def spur(self, N=20 , M=5, P=15):
 
 &lt;h1&gt;cda_g2_w11 練習&lt;/h1&gt;
 &lt;form method=POST action=spuraction&gt;
-齒數:&lt;select name"select_one&gt;
-&lt;option value="1"&gt;20&lt;/option&gt;
-&lt;option value="2"&gt;25&lt;/option&gt;
-&lt;option value="3"&gt;30&lt;/option&gt;
-&lt;option value="4"&gt;35&lt;/option&gt;
-&lt;option value="5"&gt;40&lt;/option&gt;
-&lt;option value="6"&gt;35&lt;/option&gt;
+齒數:&lt;select name="N"&gt;
+&lt;option value="15"&gt;15&lt;/option&gt;
+&lt;option value="22"&gt;22&lt;/option&gt;
+&lt;option value="32"&gt;32&lt;/option&gt;
+&lt;option value="37"&gt;37&lt;/option&gt;
+&lt;option value="40"&gt;40&lt;/option&gt;
+&lt;option value="41"&gt;41&lt;/option&gt;
 &lt;/select&gt;&lt;br /&gt;
-模數:&lt;select name"select_two&gt;
-&lt;option value="1"&gt;5&lt;/option&gt;
-&lt;option value="2"&gt;10&lt;/option&gt;
-&lt;option value="3"&gt;15&lt;/option&gt;
+模數:&lt;select name="M"&gt;
+&lt;option value="10"&gt;10&lt;/option&gt;
+&lt;option value="20"&gt;20&lt;/option&gt;
+&lt;option value="25"&gt;25&lt;/option&gt;
 &lt;/select&gt;&lt;br /&gt;
-壓力角:&lt;select name"select_three&gt;
-&lt;option value="1"&gt;15&lt;/option&gt;
-&lt;option value="2"&gt;20&lt;/option&gt;
+壓力角:&lt;select name="P"&gt;
+&lt;option value="15"&gt;15&lt;/option&gt;
+&lt;option value="20"&gt;20&lt;/option&gt;
 &lt;/select&gt;&lt;br /&gt;
-&lt;input type=submit value=send&gt;
+&lt;input type=submit value=gear&gt;
 
 &lt;/form&gt;
 &lt;hr&gt;
@@ -1949,7 +1958,7 @@ def drawspur(self, N=20, N1=10, N2=30, N3=10, N4=20, N5=30, N6=30,M=5, P=15):
 第7齒數:&lt;input type=text name=N6&gt;&lt;br /&gt;
 模數:&lt;input type=text name=M&gt;&lt;br /&gt;
 壓力角:&lt;input type=text name=P&gt;&lt;br /&gt;
-&lt;input type=submit value=send&gt;
+&lt;input type=submit value=gear7&gt;
 
 
 
